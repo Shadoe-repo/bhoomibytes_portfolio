@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "title": "Contact & Pitch Deck — Bhoomi Bytes",
+    "description": "Connect with the Bhoomi Bytes team for investor inquiries, partnership opportunities, pilot farm programs, or mentorship. Download our pitch deck."
+  },
+  "hero": {
+    "eyebrow": "Get In Touch",
+    "title": "Let's Build the Future of Farming Together",
+    "subtitle": "Whether you're an investor, agricultural institution, cooperative, or potential pilot partner — we'd love to hear from you."
+  },
+  "form": {
+    "title": "Send Us a Message",
+    "subtitle": "We respond to every inquiry within 48 hours.",
+    "inquiryTypes": [
+      "Investor Inquiry",
+      "Partnership Opportunity",
+      "Pilot Farm Program",
+      "Mentorship",
+      "Media & Press",
+      "General Question"
+    ],
+    "successTitle": "Message Sent!",
+    "successBody": "Thank you for reaching out. We'll get back to you within 48 hours.",
+    "submitLabel": "Send Message"
+  },
+  "pitchDeck": {
+    "eyebrow": "Pitch Deck",
+    "title": "Download Our Pitch Deck",
+    "subtitle": "A comprehensive overview of Bhoomi Bytes — our technology, market opportunity, business model, and roadmap.",
+    "buttonLabel": "Download PDF",
+    "note": "PDF · 2.4 MB · Updated August 2026"
+  },
+  "contact": {
+    "eyebrow": "Direct Contact",
+    "items": [
+      {
+        "id": "c1",
+        "icon": "📧",
+        "label": "Email",
+        "value": "hello@bhoomi-bytes.com",
+        "href": "mailto:hello@bhoomi-bytes.com"
+      },
+      {
+        "id": "c2",
+        "icon": "📍",
+        "label": "Location",
+        "value": "West Bengal, India",
+        "href": null
+      },
+      {
+        "id": "c3",
+        "icon": "🎓",
+        "label": "Institution",
+        "value": "Jadavpur University, IIC",
+        "href": null
+      }
+    ]
+  },
+  "reasons": {
+    "title": "Why Connect With Us?",
+    "items": [
+      {
+        "id": "r1",
+        "icon": "🌱",
+        "title": "Early-Stage Investment",
+        "desc": "We are actively seeking seed funding to scale our hardware deployment and expand to 500+ farms across West Bengal."
+      },
+      {
+        "id": "r2",
+        "icon": "🤝",
+        "title": "Agricultural Partnerships",
+        "desc": "Cooperatives, FPOs, and agri-institutions can partner with us to bring precision agriculture to their member farmers."
+      },
+      {
+        "id": "r3",
+        "icon": "🧪",
+        "title": "Pilot Farm Program",
+        "desc": "We are looking for 10–20 pilot farms in West Bengal to deploy our sensor kits and validate our AI recommendation engine."
+      },
+      {
+        "id": "r4",
+        "icon": "🧭",
+        "title": "Mentorship & Guidance",
+        "desc": "Experienced entrepreneurs, agri-tech veterans, and domain experts — your guidance can help us navigate the path to scale."
+      }
+    ]
+  }
+}

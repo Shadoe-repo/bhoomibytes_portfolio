@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "Team & Story — Bhoomi Bytes",
+    "description": "Meet the team behind Bhoomi Bytes — an engineering student team from West Bengal building IoT and AI-powered smart agriculture technology. Finalists at BhabnaJU 1.0, IIC Jadavpur University."
+  },
+  "hero": {
+    "eyebrow": "Our Story",
+    "title": "Built by Students. Driven by Purpose.",
+    "subtitle": "We are a team of engineering students from West Bengal who believe that technology can transform Indian agriculture — starting with the farmers who need it most."
+  },
+  "origin": {
+    "eyebrow": "How It Started",
+    "title": "From a Classroom Observation to a Real Problem",
+    "paragraphs": [
+      "Bhoomi Bytes began with a simple observation: Indian farmers, especially small and medium-scale growers, were making critical decisions about irrigation, soil health, and crop management based on experience and intuition alone — without access to real-time data.",
+      "We saw an opportunity. IoT sensors, microcontrollers, and AI models had become affordable enough to deploy in the field. Weather APIs were freely available. The technology existed — it just hadn't been assembled into a practical, farmer-focused platform.",
+      "So we built one. Starting with a proof-of-concept using ESP32 microcontrollers and soil moisture sensors, we developed Bhoomi Bytes — an integrated platform that collects real-time field data, processes it with AI, and delivers actionable recommendations directly to the farmer."
+    ]
+  },
+  "team": {
+    "eyebrow": "The Team",
+    "title": "Who We Are",
+    "intro": "We are a focused engineering team combining expertise in AI & data engineering, software development, embedded systems, and user experience design.",
+    "members": [
+      {
+        "id": "member-1",
+        "name": "Priyam Sarkar",
+        "role": "Founder & Lead Developer",
+        "focus": "AI & Data Engineering | Machine Learning & Crop Intelligence",
+        "badge": "FOUNDER & TEAM LEAD",
+        "badgeType": "leader",
+        "bio": "Founder and lead developer of Bhoomi Bytes. Responsible for the AI recommendation engine, crop-specific intelligence models, data pipeline design, and system architecture. Works on translating raw sensor data into actionable farming insights.",
+        "skills": [
+          "Machine Learning",
+          "Data Pipelines",
+          "Crop Science",
+          "Python",
+          "System Architecture"
+        ]
+      },
+      {
+        "id": "member-2",
+        "name": "Anirban Dalui",
+        "role": "Co-founder & Frontend Lead",
+        "focus": "Frontend & UX Engineering | Dashboard Design & Farmer Experience",
+        "badge": "CO-FOUNDER",
+        "badgeType": "cofounder",
+        "bio": "Co-founder of Bhoomi Bytes, responsible for the farmer-facing dashboard and mobile experience. Focused on creating intuitive interfaces that make complex sensor data accessible and actionable for farmers.",
+        "skills": [
+          "React",
+          "UI/UX Design",
+          "Data Visualization",
+          "Mobile-First Design"
+        ]
+      }
+    ]
+  },
+  "values": {
+    "eyebrow": "What Drives Us",
+    "title": "Our Core Values",
+    "items": [
+      {
+        "id": "value-1",
+        "icon": "🌱",
+        "title": "Farmer First",
+        "desc": "Every feature we build is evaluated through one lens: does this make a farmer's life better? Technology for its own sake is not our goal."
+      },
+      {
+        "id": "value-2",
+        "icon": "🔬",
+        "title": "Evidence-Based",
+        "desc": "We build on real data — sensor readings, weather patterns, crop science research. Our recommendations are grounded in evidence, not guesswork."
+      },
+      {
+        "id": "value-3",
+        "icon": "⚡",
+        "title": "Practical & Affordable",
+        "desc": "We design for the constraints of real Indian farms — limited connectivity, budget sensitivity, and the need for simple, reliable tools."
+      },
+      {
+        "id": "value-4",
+        "icon": "🤝",
+        "title": "Open to Collaboration",
+        "desc": "We actively seek partnerships with agricultural institutions, cooperatives, and government programs to amplify our impact."
+      }
+    ]
+  },
+  "bhabnaju": {
+    "eyebrow": "BhabnaJU 1.0",
+    "title": "Our First Major Milestone",
+    "intro": "Being selected as a finalist at BhabnaJU 1.0 was a defining moment for Bhoomi Bytes — our first external validation that the idea had real merit.",
+    "what": {
+      "label": "What is BhabnaJU?",
+      "desc": "BhabnaJU 1.0 is an ideation and innovation workshop program organized by the Institution's Innovation Council (IIC) at Jadavpur University — one of India's most prestigious technical institutions. The program brings together student innovators to develop, present, and refine early-stage ideas across technology, science, and social impact."
+    },
+    "category": "Technology & Applied Science",
+    "institution": "Jadavpur University, IIC",
+    "timeline": [
+      {
+        "id": "tl-1",
+        "phase": "Ideation",
+        "desc": "Developed the core concept: an integrated IoT + AI platform for small-scale Indian farmers, focused on soil monitoring and smart irrigation."
+      },
+      {
+        "id": "tl-2",
+        "phase": "Prototype",
+        "desc": "Built an early hardware prototype using ESP32 microcontrollers and soil moisture sensors, paired with a basic data dashboard."
+      },
+      {
+        "id": "tl-3",
+        "phase": "Submission",
+        "desc": "Submitted the concept to BhabnaJU 1.0 under the Technology & Applied Science category at IIC, Jadavpur University."
+      },
+      {
+        "id": "tl-4",
+        "phase": "Finalist",
+        "desc": "Selected as a finalist — participated in workshops, presented to evaluators, received structured feedback, and refined the solution."
+      },
+      {
+        "id": "tl-5",
+        "phase": "Today",
+        "desc": "Continuing to develop the platform, expand sensor capabilities, and build toward a pilot deployment with real farmers in West Bengal."
+      }
+    ],
+    "quote": "BhabnaJU gave us more than recognition — it gave us a framework for thinking about our solution rigorously, and the confidence to keep building."
+  },
+  "cta": {
+    "title": "Want to Follow Our Journey?",
+    "subtitle": "We are actively looking for mentors, agricultural partners, and early pilot farms. If you believe in what we are building, we would love to connect.",
+    "buttonLabel": "Get in Touch",
+    "buttonHref": "/contact"
+  }
+}

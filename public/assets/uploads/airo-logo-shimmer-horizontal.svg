@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="500" height="120" fill="none">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="shimmerGrad" x1="-100%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="50%" stop-color="rgba(255,255,255,0.4)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Logo Icon: Digital Sprout / Leaf -->
+  <g transform="translate(15, 10)">
+    <!-- Base Glow Circle -->
+    <circle cx="50" cy="50" r="45" fill="url(#leafGrad)" opacity="0.15" filter="url(#glow)" />
+    
+    <!-- Outer Tech Circuit Ring -->
+    <circle cx="50" cy="50" r="42" stroke="url(#leafGrad)" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.7" />
+    
+    <!-- Leaf Stem / Circuit Track -->
+    <path d="M50 82 V48 C50 35 60 25 72 25" stroke="url(#accentGrad)" stroke-width="3.5" stroke-linecap="round" />
+    
+    <!-- Left Organic Leaf -->
+    <path d="M50 75 C30 70 20 50 25 32 C38 30 50 42 50 60 Z" fill="url(#leafGrad)" />
+    
+    <!-- Right Tech Leaf -->
+    <path d="M50 55 C65 50 78 38 75 22 C58 24 50 38 50 50 Z" fill="url(#leafGrad)" opacity="0.85" />
+    
+    <!-- Circuit Nodes (Tech Bytes) -->
+    <circle cx="72" cy="25" r="4.5" fill="url(#accentGrad)" filter="url(#glow)" />
+    <circle cx="25" cy="32" r="3.5" fill="#34d399" />
+    <circle cx="75" cy="22" r="3.5" fill="#34d399" />
+    <circle cx="36" cy="46" r="2.5" fill="#ffffff" opacity="0.9" />
+    
+    <!-- Connection Lines -->
+    <line x1="50" y1="60" x2="36" y2="46" stroke="#ffffff" stroke-width="1.5" opacity="0.6" stroke-dasharray="2 2" />
+  </g>
+
+  <!-- Brand Name Typography -->
+  <text x="125" y="62" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="38" letter-spacing="2" fill="#ffffff">
+    BHOOMI
+    <tspan fill="url(#leafGrad)"> BYTES</tspan>
+  </text>
+  
+  <!-- Tagline / Subtitle -->
+  <text x="127" y="86" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="12" letter-spacing="4" fill="#a7f3d0" opacity="0.9">
+    AGRITECH INTELLIGENCE PLATFORM
+  </text>
+  
+  <!-- Decorative Accent Line -->
+  <rect x="127" y="96" width="340" height="2" rx="1" fill="url(#accentGrad)" opacity="0.8" />
+</svg>

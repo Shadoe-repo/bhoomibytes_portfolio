@@ -1,0 +1,257 @@
+{
+  "logo/horizontal": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png",
+    "searchQuery": "A modern minimal wordmark logo for \"Bhoomi Bytes\" — an AgriTech startup. The ico",
+    "alternatives": [],
+    "solidUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-original-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+    },
+    "mockupUrlMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+    },
+    "landscapeMockupUrlMap": {},
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png": {
+        "sessionId": "0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd",
+        "logoId": "a13f845a-1dd4-4326-abd6-f594e39169d0",
+        "groupId": "563f15f6-757c-4c32-bb34-755f2d04c6f8"
+      }
+    },
+    "productMockupsMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png": [
+        {
+          "type": "mug",
+          "label": "Mug",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-mug-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+        },
+        {
+          "type": "card",
+          "label": "Business Card",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-card-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+        },
+        {
+          "type": "tshirt",
+          "label": "T-Shirt",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-tshirt-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+        },
+        {
+          "type": "box",
+          "label": "Packaging",
+          "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-box-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+        }
+      ]
+    },
+    "productMockups": [
+      {
+        "type": "mug",
+        "label": "Mug",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-mug-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+      },
+      {
+        "type": "card",
+        "label": "Business Card",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-card-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+      },
+      {
+        "type": "tshirt",
+        "label": "T-Shirt",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-tshirt-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+      },
+      {
+        "type": "box",
+        "label": "Packaging",
+        "url": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-mockup-box-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
+      }
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-22T06:33:33.184Z",
+    "lastUpdated": "2026-08-22T06:34:05.851Z",
+    "surfaceMode": "dark",
+    "generatedForSurfaceColor": "#0d2b1a",
+    "darkSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png",
+    "logoGroupId": "563f15f6-757c-4c32-bb34-755f2d04c6f8"
+  },
+  "pages/home/farmer-tech": {
+    "requestedSize": {
+      "width": 1200,
+      "height": 800,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "graphicalStyles": "photography",
+    "minimumSize": "large",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2284987833",
+    "searchQuery": "Indian farmer using smartphone technology in agricultural field",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2284987847",
+      "https://img1.wsimg.com/isteam/getty/2284987943",
+      "https://img1.wsimg.com/isteam/getty/2283954544"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-22T06:33:34.698Z",
+    "lastUpdated": "2026-08-22T06:33:34.698Z",
+    "gettyId": "2284987833",
+    "alternativeGettyIds": [
+      "2284987847",
+      "2284987943",
+      "2283954544"
+    ]
+  },
+  "pages/home/hero": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 1080,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "graphicalStyles": "photography",
+    "minimumSize": "large",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2259697266",
+    "searchQuery": "Indian rice paddy field lush green aerial view",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2234249253",
+      "https://img1.wsimg.com/isteam/getty/1337191675",
+      "https://img1.wsimg.com/isteam/getty/2244312963",
+      "https://img1.wsimg.com/isteam/getty/2191534927"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-22T06:33:36.612Z",
+    "lastUpdated": "2026-08-22T06:33:36.612Z",
+    "gettyId": "2259697266",
+    "alternativeGettyIds": [
+      "2234249253",
+      "1337191675",
+      "2244312963",
+      "2191534927"
+    ]
+  },
+  "pages/home/tea-garden": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 800,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "graphicalStyles": "photography",
+    "minimumSize": "large",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1430890376",
+    "searchQuery": "tea garden West Bengal India green hills landscape",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1674985529",
+      "https://img1.wsimg.com/isteam/getty/954299900",
+      "https://img1.wsimg.com/isteam/getty/1329520371"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-22T06:33:39.410Z",
+    "lastUpdated": "2026-08-22T06:33:39.410Z",
+    "gettyId": "1430890376",
+    "alternativeGettyIds": [
+      "1674985529",
+      "954299900",
+      "1329520371"
+    ]
+  },
+  "pages/home/wheat-field": {
+    "requestedSize": {
+      "width": 1920,
+      "height": 800,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "graphicalStyles": "photography",
+    "minimumSize": "large",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2269236634",
+    "searchQuery": "golden wheat field India harvest landscape",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/2196943808",
+      "https://img1.wsimg.com/isteam/getty/2275980728",
+      "https://img1.wsimg.com/isteam/getty/2202527528"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-22T06:33:41.375Z",
+    "lastUpdated": "2026-08-22T06:33:41.375Z",
+    "gettyId": "2269236634",
+    "alternativeGettyIds": [
+      "2196943808",
+      "2275980728",
+      "2202527528"
+    ]
+  },
+  "logo/favicon": {
+    "mediaType": "logo",
+    "currentUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/2b2a5f68-fe50-40e5-bf96-b8b2ff128719/favicon-transparent-22100751-4db6-4d8f-b6fb-e213861ca35c/logo-logo.png",
+    "searchQuery": "favicon",
+    "alternatives": [],
+    "logoSourceMap": {
+      "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/2b2a5f68-fe50-40e5-bf96-b8b2ff128719/favicon-transparent-22100751-4db6-4d8f-b6fb-e213861ca35c/logo-logo.png": {
+        "sessionId": "2b2a5f68-fe50-40e5-bf96-b8b2ff128719",
+        "logoId": "22100751-4db6-4d8f-b6fb-e213861ca35c",
+        "groupId": "563f15f6-757c-4c32-bb34-755f2d04c6f8"
+      }
+    },
+    "logoGroupId": "563f15f6-757c-4c32-bb34-755f2d04c6f8",
+    "userModified": false,
+    "createdAt": "2026-08-22T06:33:50.441Z",
+    "lastUpdated": "2026-08-22T06:34:05.954Z",
+    "surfaceMode": "dark",
+    "generatedForSurfaceColor": "#0d2b1a",
+    "darkSurfaceUrl": "https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/2b2a5f68-fe50-40e5-bf96-b8b2ff128719/favicon-transparent-22100751-4db6-4d8f-b6fb-e213861ca35c/logo-logo.png"
+  },
+  "pages/team/hero": {
+    "requestedSize": {
+      "width": 1400,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "graphicalStyles": "photography",
+    "minimumSize": "large",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/2246468073",
+    "searchQuery": "young Indian engineering students working on electronics project laptop",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/1448069413",
+      "https://img1.wsimg.com/isteam/getty/2148419703",
+      "https://img1.wsimg.com/isteam/getty/1456008164"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-22T07:12:23.638Z",
+    "lastUpdated": "2026-08-22T07:12:23.638Z",
+    "gettyId": "2246468073",
+    "alternativeGettyIds": [
+      "1448069413",
+      "2148419703",
+      "1456008164"
+    ]
+  },
+  "pages/team/jadavpur": {
+    "requestedSize": {
+      "width": 800,
+      "height": 500,
+      "fit": "cover"
+    },
+    "orientations": "horizontal",
+    "graphicalStyles": "photography",
+    "minimumSize": "large",
+    "mediaType": "image",
+    "currentUrl": "https://img1.wsimg.com/isteam/getty/1521346293",
+    "searchQuery": "university campus India engineering college building",
+    "alternatives": [
+      "https://img1.wsimg.com/isteam/getty/968890140",
+      "https://img1.wsimg.com/isteam/getty/1679584074"
+    ],
+    "userModified": false,
+    "createdAt": "2026-08-22T07:12:24.512Z",
+    "lastUpdated": "2026-08-22T07:12:24.512Z",
+    "gettyId": "1521346293",
+    "alternativeGettyIds": [
+      "968890140",
+      "1679584074"
+    ]
+  }
+}

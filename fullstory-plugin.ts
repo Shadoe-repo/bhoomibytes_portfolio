@@ -1,0 +1,8 @@
+import type { Plugin } from 'vite';
+
+export function fullStoryPlugin(): Plugin {
+  return {
+    name: 'fullstory-plugin-stub',
+    apply: 'serve',
+  };
+}

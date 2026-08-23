@@ -1,0 +1,421 @@
+{
+  "meta": {
+    "title": "Technology Deep Dive — Bhoomi Bytes",
+    "description": "Explore the full technical architecture of Bhoomi Bytes: ESP32 microcontrollers, soil and climate sensors, real-time data pipelines, AI recommendation engine, and weather API integration."
+  },
+  "hero": {
+    "eyebrow": "Technical Architecture",
+    "title": "How Bhoomi Bytes Works Under the Hood",
+    "subtitle": "From a sensor buried in the soil to an AI-generated irrigation recommendation on a farmer's phone — every layer of the stack, explained."
+  },
+  "overview": {
+    "eyebrow": "System Overview",
+    "title": "Five Layers. One Integrated Platform.",
+    "subtitle": "Bhoomi Bytes is built as a layered IoT + AI stack. Each layer has a single responsibility and communicates with the next through well-defined interfaces.",
+    "layers": [
+      {
+        "id": "l1",
+        "number": "01",
+        "name": "Sensing Layer",
+        "desc": "Physical sensors deployed in the field collect soil and climate data continuously.",
+        "color": "primary"
+      },
+      {
+        "id": "l2",
+        "number": "02",
+        "name": "Edge Processing",
+        "desc": "ESP32 microcontrollers aggregate, filter, and transmit sensor readings over Wi-Fi.",
+        "color": "secondary"
+      },
+      {
+        "id": "l3",
+        "number": "03",
+        "name": "Data Pipeline",
+        "desc": "A backend API ingests, validates, stores, and streams real-time telemetry data.",
+        "color": "accent"
+      },
+      {
+        "id": "l4",
+        "number": "04",
+        "name": "Intelligence Layer",
+        "desc": "AI models and weather API data are combined to generate crop-specific recommendations.",
+        "color": "primary"
+      },
+      {
+        "id": "l5",
+        "number": "05",
+        "name": "Actuation & UI",
+        "desc": "Recommendations drive pump control commands and are surfaced on the farmer dashboard.",
+        "color": "secondary"
+      }
+    ]
+  },
+  "hardware": {
+    "eyebrow": "Hardware Layer",
+    "title": "ESP32 + Sensor Array",
+    "intro": "The field unit is built around the ESP32 — a low-cost, Wi-Fi-enabled microcontroller with dual-core processing and deep-sleep modes for power efficiency. Each unit supports up to 8 sensors on a single deployment.",
+    "esp32": {
+      "title": "ESP32 Microcontroller",
+      "specs": [
+        {
+          "id": "e1",
+          "label": "Processor",
+          "value": "Xtensa dual-core LX6, up to 240 MHz"
+        },
+        {
+          "id": "e2",
+          "label": "RAM",
+          "value": "520 KB SRAM"
+        },
+        {
+          "id": "e3",
+          "label": "Flash",
+          "value": "4 MB (expandable)"
+        },
+        {
+          "id": "e4",
+          "label": "Connectivity",
+          "value": "Wi-Fi 802.11 b/g/n, Bluetooth 4.2"
+        },
+        {
+          "id": "e5",
+          "label": "GPIO Pins",
+          "value": "34 programmable pins"
+        },
+        {
+          "id": "e6",
+          "label": "ADC",
+          "value": "12-bit SAR ADC, 18 channels"
+        },
+        {
+          "id": "e7",
+          "label": "Power",
+          "value": "Deep-sleep: 10 µA, Active: ~240 mA"
+        },
+        {
+          "id": "e8",
+          "label": "Protocol",
+          "value": "MQTT over TLS for telemetry"
+        }
+      ]
+    },
+    "sensors": [
+      {
+        "id": "s1",
+        "name": "Soil Moisture Sensor",
+        "model": "Capacitive v1.2",
+        "icon": "💧",
+        "range": "0–100% VWC",
+        "accuracy": "±3% VWC",
+        "interface": "Analog (ADC)",
+        "depth": "10–30 cm burial depth",
+        "desc": "Capacitive design avoids corrosion issues common with resistive sensors. Measures volumetric water content using dielectric permittivity of soil."
+      },
+      {
+        "id": "s2",
+        "name": "Temperature & Humidity",
+        "model": "DHT22 / AM2302",
+        "icon": "🌡️",
+        "range": "Temp: -40°C to +80°C / Humidity: 0–100% RH",
+        "accuracy": "±0.5°C / ±2–5% RH",
+        "interface": "Single-wire digital",
+        "depth": "Mounted above canopy",
+        "desc": "Measures ambient air temperature and relative humidity. Used for evapotranspiration calculations and disease risk modeling."
+      },
+      {
+        "id": "s3",
+        "name": "Soil pH Sensor",
+        "model": "Analog pH Probe",
+        "icon": "⚗️",
+        "range": "pH 0–14",
+        "accuracy": "±0.1 pH",
+        "interface": "Analog (ADC via op-amp)",
+        "depth": "5–15 cm burial depth",
+        "desc": "Electrochemical sensor measuring hydrogen ion activity. Critical for nutrient availability modeling — most crops require pH 6.0–7.5."
+      },
+      {
+        "id": "s4",
+        "name": "TDS / EC Sensor",
+        "model": "Gravity TDS Meter",
+        "icon": "🧪",
+        "range": "0–1000 ppm TDS",
+        "accuracy": "±10% full scale",
+        "interface": "Analog (ADC)",
+        "depth": "Root zone depth",
+        "desc": "Measures total dissolved solids as a proxy for soil nutrient concentration and salinity. Alerts when fertilizer runoff or saline intrusion is detected."
+      },
+      {
+        "id": "s5",
+        "name": "Light Intensity",
+        "model": "BH1750 / LDR",
+        "icon": "☀️",
+        "range": "1–65535 lux",
+        "accuracy": "±20%",
+        "interface": "I²C (BH1750) / Analog (LDR)",
+        "depth": "Above canopy",
+        "desc": "Measures photosynthetically active radiation (PAR) proxy. Used to adjust irrigation scheduling — high light increases evapotranspiration demand."
+      }
+    ]
+  },
+  "firmware": {
+    "eyebrow": "Firmware",
+    "title": "ESP32 Firmware Architecture",
+    "intro": "The firmware is written in C++ using the Arduino framework on top of ESP-IDF. It runs a cooperative task loop with three primary responsibilities: sensor polling, local buffering, and MQTT transmission.",
+    "tasks": [
+      {
+        "id": "t1",
+        "name": "Sensor Poll Task",
+        "interval": "Every 30 seconds",
+        "desc": "Reads all connected sensors via ADC and I²C. Applies moving-average filtering to reduce noise. Stores readings in a circular buffer."
+      },
+      {
+        "id": "t2",
+        "name": "Transmission Task",
+        "interval": "Every 5 minutes",
+        "desc": "Aggregates buffered readings into a JSON payload. Publishes to the MQTT broker over TLS. Retries with exponential backoff on failure."
+      },
+      {
+        "id": "t3",
+        "name": "Command Listener",
+        "interval": "Continuous (MQTT subscribe)",
+        "desc": "Listens on the device command topic for pump control instructions. Executes relay toggle immediately on receipt. Acknowledges back to broker."
+      },
+      {
+        "id": "t4",
+        "name": "OTA Update Task",
+        "interval": "On-demand",
+        "desc": "Checks for firmware updates on boot and on a daily schedule. Downloads and applies updates over HTTPS without interrupting sensor operation."
+      }
+    ],
+    "payload": "{\n  \"device_id\": \"BB-WB-001\",\n  \"timestamp\": 1724310000,\n  \"readings\": {\n    \"soil_moisture\": 42.3,\n    \"temperature\": 28.7,\n    \"humidity\": 74.2,\n    \"ph\": 6.8,\n    \"tds\": 312,\n    \"light_lux\": 18400\n  },\n  \"pump_state\": false,\n  \"battery_mv\": 3820,\n  \"rssi_dbm\": -58\n}"
+  },
+  "pipeline": {
+    "eyebrow": "Data Pipeline",
+    "title": "From Field to Database in Under 2 Seconds",
+    "intro": "The backend pipeline is designed for low-latency ingestion, real-time streaming to the dashboard, and reliable long-term storage for AI model training.",
+    "stages": [
+      {
+        "id": "p1",
+        "step": "01",
+        "name": "MQTT Ingestion",
+        "tech": "MQTT Broker (Mosquitto)",
+        "desc": "ESP32 devices publish JSON payloads to topic `bhoomi/{device_id}/telemetry`. The broker authenticates devices via client certificates and forwards to the processing service."
+      },
+      {
+        "id": "p2",
+        "step": "02",
+        "name": "Validation & Parsing",
+        "tech": "Node.js / Express",
+        "desc": "Incoming payloads are validated against a JSON schema. Out-of-range values are flagged as anomalies. Timestamps are normalized to UTC. Malformed payloads are rejected and logged."
+      },
+      {
+        "id": "p3",
+        "step": "03",
+        "name": "Time-Series Storage",
+        "tech": "InfluxDB / PostgreSQL",
+        "desc": "Validated readings are written to InfluxDB for high-frequency time-series queries (dashboard charts, trend analysis). Aggregated daily summaries are written to PostgreSQL for AI training data."
+      },
+      {
+        "id": "p4",
+        "step": "04",
+        "name": "Real-Time Streaming",
+        "tech": "WebSocket / SSE",
+        "desc": "A WebSocket server pushes new readings to connected dashboard clients within 500ms of ingestion. The live demo uses Server-Sent Events for the sensor gauge updates."
+      },
+      {
+        "id": "p5",
+        "step": "05",
+        "name": "AI Trigger",
+        "tech": "Internal event queue",
+        "desc": "Each new telemetry batch triggers the AI recommendation engine asynchronously. Results are stored and pushed to the dashboard alongside the raw sensor data."
+      }
+    ]
+  },
+  "ai": {
+    "eyebrow": "Intelligence Layer",
+    "title": "AI Recommendation Engine",
+    "intro": "The recommendation engine combines real-time sensor data, historical field data, crop-specific agronomic knowledge, and live weather forecasts to generate actionable, context-aware recommendations.",
+    "inputs": [
+      {
+        "id": "ai1",
+        "label": "Soil Moisture",
+        "source": "ESP32 sensor"
+      },
+      {
+        "id": "ai2",
+        "label": "Temperature & Humidity",
+        "source": "ESP32 sensor"
+      },
+      {
+        "id": "ai3",
+        "label": "Soil pH & TDS",
+        "source": "ESP32 sensor"
+      },
+      {
+        "id": "ai4",
+        "label": "Crop Type & Growth Stage",
+        "source": "Farmer profile"
+      },
+      {
+        "id": "ai5",
+        "label": "Historical Yield Data",
+        "source": "Field database"
+      },
+      {
+        "id": "ai6",
+        "label": "7-Day Weather Forecast",
+        "source": "OpenWeatherMap API"
+      },
+      {
+        "id": "ai7",
+        "label": "Rainfall Probability",
+        "source": "OpenWeatherMap API"
+      },
+      {
+        "id": "ai8",
+        "label": "Evapotranspiration (ET₀)",
+        "source": "Calculated (FAO-56 Penman-Monteith)"
+      }
+    ],
+    "models": [
+      {
+        "id": "m1",
+        "name": "Irrigation Decision Model",
+        "type": "Rule-based + ML hybrid",
+        "desc": "Combines agronomic threshold rules (crop-specific field capacity and wilting point values) with a gradient-boosted classifier trained on historical irrigation outcomes. Outputs: irrigate now / schedule / hold.",
+        "accuracy": "87% precision on held-out validation set"
+      },
+      {
+        "id": "m2",
+        "name": "Crop Stress Detector",
+        "type": "Anomaly detection",
+        "desc": "Monitors sensor readings for patterns associated with water stress, nutrient deficiency, or disease onset. Uses an isolation forest model trained on labeled stress events from agricultural research datasets.",
+        "accuracy": "91% recall on stress event detection"
+      },
+      {
+        "id": "m3",
+        "name": "Irrigation Volume Calculator",
+        "type": "Physics-based model",
+        "desc": "Calculates the precise water volume needed to bring soil moisture to field capacity, accounting for soil texture, root depth, and ET₀. Based on the FAO-56 crop water requirement methodology.",
+        "accuracy": "±8% vs. tensiometer ground truth"
+      }
+    ],
+    "crops": [
+      "Rice",
+      "Wheat",
+      "Potato",
+      "Tomato",
+      "Tea",
+      "Maize",
+      "Vegetables"
+    ]
+  },
+  "weather": {
+    "eyebrow": "Weather Integration",
+    "title": "OpenWeatherMap API Integration",
+    "intro": "Live weather data is fetched every 30 minutes per farm location and used to adjust irrigation recommendations in real time. Rain forecasts prevent unnecessary irrigation; heat forecasts trigger pre-emptive watering.",
+    "endpoints": [
+      {
+        "id": "w1",
+        "name": "Current Weather",
+        "endpoint": "/data/2.5/weather",
+        "use": "Real-time temperature, humidity, wind speed for ET₀ calculation"
+      },
+      {
+        "id": "w2",
+        "name": "5-Day Forecast",
+        "endpoint": "/data/2.5/forecast",
+        "use": "3-hour interval forecasts for irrigation scheduling over the next 5 days"
+      },
+      {
+        "id": "w3",
+        "name": "UV Index",
+        "endpoint": "/data/2.5/uvi",
+        "use": "Solar radiation proxy for evapotranspiration and crop stress modeling"
+      }
+    ],
+    "logic": [
+      {
+        "id": "wl1",
+        "condition": "Rain probability > 70% in next 12 hours",
+        "action": "Suppress irrigation recommendation"
+      },
+      {
+        "id": "wl2",
+        "condition": "Temperature > 38°C forecast",
+        "action": "Trigger pre-emptive irrigation alert"
+      },
+      {
+        "id": "wl3",
+        "condition": "Wind speed > 20 km/h",
+        "action": "Delay sprinkler scheduling, recommend drip instead"
+      },
+      {
+        "id": "wl4",
+        "condition": "Humidity < 30% for 3+ consecutive hours",
+        "action": "Increase ET₀ estimate, shorten irrigation interval"
+      }
+    ]
+  },
+  "actuation": {
+    "eyebrow": "Actuation Layer",
+    "title": "Smart Pump Control",
+    "intro": "The ESP32 controls a relay module connected to the irrigation pump motor. Commands flow from the dashboard or AI engine through the MQTT broker to the device in under 1 second.",
+    "features": [
+      {
+        "id": "a1",
+        "icon": "⚡",
+        "title": "Instant Remote Control",
+        "desc": "Toggle the pump on/off from the dashboard or mobile app. Command latency under 1 second over a stable Wi-Fi connection."
+      },
+      {
+        "id": "a2",
+        "icon": "⏱️",
+        "title": "Auto-Off Scheduling",
+        "desc": "Set irrigation duration (5, 10, 15, or 30 minutes). The ESP32 enforces the timer locally — pump stops even if connectivity is lost."
+      },
+      {
+        "id": "a3",
+        "icon": "🤖",
+        "title": "AI-Triggered Automation",
+        "desc": "When the AI engine determines irrigation is needed, it can automatically trigger the pump (with farmer opt-in) or send a push notification for manual approval."
+      },
+      {
+        "id": "a4",
+        "icon": "🔒",
+        "title": "Safety Interlocks",
+        "desc": "Pump is blocked if soil moisture is already above field capacity, if a rain event is in progress, or if the device has been offline for more than 10 minutes."
+      }
+    ]
+  },
+  "roadmapTech": {
+    "eyebrow": "Technical Roadmap",
+    "title": "What We Are Building Next",
+    "items": [
+      {
+        "id": "rt1",
+        "phase": "Q4 2026",
+        "title": "LoRaWAN Support",
+        "desc": "Add LoRa radio modules for farms without reliable Wi-Fi. Range: 2–15 km in rural terrain."
+      },
+      {
+        "id": "rt2",
+        "phase": "Q1 2027",
+        "title": "Edge AI Inference",
+        "desc": "Run lightweight TFLite models directly on the ESP32-S3 for offline recommendations when connectivity is unavailable."
+      },
+      {
+        "id": "rt3",
+        "phase": "Q2 2027",
+        "title": "Satellite Imagery Integration",
+        "desc": "Ingest NDVI data from Sentinel-2 to detect crop health patterns at field scale, not just sensor point measurements."
+      },
+      {
+        "id": "rt4",
+        "phase": "Q3 2027",
+        "title": "Multi-Node Mesh Network",
+        "desc": "ESP-MESH protocol to create self-healing sensor networks across large farms without additional infrastructure."
+      }
+    ]
+  }
+}

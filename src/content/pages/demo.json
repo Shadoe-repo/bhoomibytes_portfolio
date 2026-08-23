@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "Field Station Dashboard",
+    "badge": "Demo Mode",
+    "description": "Simulated real-time data updates every 2 seconds. Toggle the pump, change weather scenarios, and switch crops to see AI recommendations adapt."
+  },
+  "footer": {
+    "note": "Demo Mode: All sensor values are simulated and update every 2 seconds. The pump control, weather scenarios, and crop selector are fully interactive — AI recommendations adapt in real time. In production, this dashboard connects to live IoT field sensors via ESP32 controllers."
+  },
+  "meta": {
+    "title": "Interactive Demo — Bhoomi Bytes",
+    "description": "Live interactive dashboard simulating real-time IoT sensor data, AI recommendations, and remote irrigation control."
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "09510021-5d98-476e-b30d-d42c3a5c53c1",
+    "name": "Logos",
+    "createdAt": "2026-08-22T06:33:33.201Z",
+    "slots": [
+      "logo/horizontal",
+      "logo/favicon"
+    ]
+  }
+]

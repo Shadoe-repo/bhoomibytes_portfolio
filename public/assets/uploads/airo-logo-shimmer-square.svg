@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#011812" />
+    </linearGradient>
+    <linearGradient id="leafGradSq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="accentGradSq" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <filter id="glowSq" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" stroke="#10b981" stroke-width="4" stroke-opacity="0.3" />
+  
+  <!-- Subtle Grid Pattern Background -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="64" y1="0" x2="64" y2="512" />
+    <line x1="128" y1="0" x2="128" y2="512" />
+    <line x1="192" y1="0" x2="192" y2="512" />
+    <line x1="256" y1="0" x2="256" y2="512" />
+    <line x1="320" y1="0" x2="320" y2="512" />
+    <line x1="384" y1="0" x2="384" y2="512" />
+    <line x1="448" y1="0" x2="448" y2="512" />
+    <line x1="0" y1="64" x2="512" y2="64" />
+    <line x1="0" y1="128" x2="512" y2="128" />
+    <line x1="0" y1="192" x2="512" y2="192" />
+    <line x1="0" y1="256" x2="512" y2="256" />
+    <line x1="0" y1="320" x2="512" y2="320" />
+    <line x1="0" y1="384" x2="512" y2="384" />
+    <line x1="0" y1="448" x2="512" y2="448" />
+  </g>
+
+  <!-- Central Emblem -->
+  <g transform="translate(106, 70)">
+    <!-- Glowing Outer Ring -->
+    <circle cx="150" cy="150" r="140" fill="url(#leafGradSq)" opacity="0.12" filter="url(#glowSq)" />
+    <circle cx="150" cy="150" r="130" stroke="url(#leafGradSq)" stroke-width="6" stroke-dasharray="24 12" opacity="0.6" />
+    
+    <!-- Central Digital Leaf Structure -->
+    <path d="M150 250 V140 C150 100 180 70 220 70" stroke="url(#accentGradSq)" stroke-width="10" stroke-linecap="round" filter="url(#glowSq)" />
+    
+    <path d="M150 230 C90 215 60 155 75 100 C114 95 150 130 150 185 Z" fill="url(#leafGradSq)" filter="url(#glowSq)" />
+    <path d="M150 170 C195 155 234 118 225 70 C174 76 150 118 150 155 Z" fill="url(#leafGradSq)" opacity="0.85" />
+    
+    <!-- Tech Node Elements -->
+    <circle cx="220" cy="70" r="12" fill="url(#accentGradSq)" filter="url(#glowSq)" />
+    <circle cx="75" cy="100" r="9" fill="#34d399" />
+    <circle cx="225" cy="70" r="8" fill="#ffffff" opacity="0.8" />
+    <circle cx="108" cy="142" r="6" fill="#ffffff" opacity="0.9" />
+    <line x1="150" y1="185" x2="108" y2="142" stroke="#ffffff" stroke-width="4" opacity="0.5" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Typography underneath -->
+  <text x="256" y="420" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="40" letter-spacing="4" fill="#ffffff">
+    BHOOMI BYTES
+  </text>
+  <text x="256" y="452" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="16" letter-spacing="6" fill="#6ee7b7">
+    AGRITECH
+  </text>
+</svg>
