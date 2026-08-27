@@ -11,7 +11,8 @@
  * MutationObserver to catch React-rendered images, polls the manifest in dev mode.
  */
 ;(function () {
-  var SLOT_PREFIX_IMAGES = '/airo-assets/images/'
+  var ASSET_BASE = (document.currentScript && new URL(document.currentScript.src).pathname.replace(/[^/]+$/, '')) || '/'
+  var SLOT_PREFIX_IMAGES = ASSET_BASE + 'airo-assets/images/'
   // Must stay aligned with LOGO_NATURAL_SLOT_PATHS in MediaManifestService.ts.
   var SLOT_TO_EXPECTED_LAYOUT = {
     'logo/horizontal': 'horizontal',
@@ -79,7 +80,7 @@
   // Re-read the manifest, sync naturalOrientations, clear stale corrections,
   // re-patch. Used on src changes (Vite HMR pushes new versions before our 3s poll).
   function refreshFromManifest() {
-    fetch('/airo-media.json').then(function (r) {
+    fetch(ASSET_BASE + 'airo-media.json').then(function (r) {
       return r.ok ? r.json() : {}
     }).then(function (m) {
       for (var k in SLOT_TO_EXPECTED_LAYOUT) {
@@ -97,7 +98,7 @@
     }).catch(function () {})
   }
 
-  fetch('/airo-media.json')
+  fetch(ASSET_BASE + 'airo-media.json')
     .then(function (res) {
       if (!res.ok) return {}
       return res.json()
@@ -148,7 +149,7 @@
       if (isDevMode) {
         var pollFailures = 0
         var pollIntervalId = setInterval(function () {
-          fetch('/airo-media.json').then(function (r) {
+          fetch(ASSET_BASE + 'airo-media.json').then(function (r) {
             if (!r.ok) return {}
             return r.json()
           }).then(function (m) {
