@@ -43,11 +43,11 @@ export default function ContactPage() {
             </Link>
             <div className="h-4 w-px bg-white/20" />
             <img
-              src="/airo-assets/images/logo/horizontal/dark"
+              src="https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
               alt="Bhoomi Bytes"
               className="h-6 w-auto object-contain"
               onError={(e) => {
-                e.currentTarget.src = '/assets/uploads/airo-logo-shimmer-horizontal.svg';
+                e.currentTarget.src = `${import.meta.env.BASE_URL}assets/uploads/airo-logo-shimmer-horizontal.svg`;
               }}
             />
             <div className="ml-auto flex items-center gap-3">
@@ -170,7 +170,7 @@ export default function ContactPage() {
                 <p className="text-sm text-white/55 leading-relaxed mb-5">{contact.pitchDeck.subtitle}</p>
 
                 <a
-                  href="/pitch-deck.pdf"
+                  href={`${import.meta.env.BASE_URL}pitch-deck.pdf`}
                   download
                   className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold border border-primary/40 text-primary hover:bg-primary/10 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                   aria-label="Download Bhoomi Bytes pitch deck PDF"

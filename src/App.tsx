@@ -51,7 +51,9 @@ const routeTree: RouteObject[] = [
   },
 ];
 
-const router = createBrowserRouter(routeTree);
+const router = createBrowserRouter(routeTree, {
+  basename: import.meta.env.BASE_URL,
+});
 
 export default function App() {
   return (

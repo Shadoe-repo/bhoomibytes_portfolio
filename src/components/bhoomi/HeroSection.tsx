@@ -24,7 +24,7 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/airo-assets/images/pages/home/hero"
+          src="https://img1.wsimg.com/isteam/getty/2259697266"
           alt="Indian agricultural field"
           className="w-full h-full object-cover"
           loading="eager"
@@ -32,7 +32,7 @@ export default function HeroSection() {
           width={1920}
           height={1080}
           onError={(e) => {
-            e.currentTarget.src = '/assets/uploads/hero-field-bg.svg';
+            e.currentTarget.src = `${import.meta.env.BASE_URL}assets/uploads/hero-field-bg.svg`;
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
