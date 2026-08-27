@@ -52,11 +52,11 @@ export default function DemoPage() {
 
             <div className="flex items-center gap-2">
               <img
-                src="/airo-assets/images/logo/horizontal/dark"
+                src="https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
                 alt="Bhoomi Bytes"
                 className="h-6 w-auto object-contain"
                 onError={(e) => {
-                  e.currentTarget.src = '/assets/uploads/airo-logo-shimmer-horizontal.svg';
+                  e.currentTarget.src = `${import.meta.env.BASE_URL}assets/uploads/airo-logo-shimmer-horizontal.svg`;
                 }}
               />
             </div>

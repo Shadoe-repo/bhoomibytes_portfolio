@@ -365,6 +365,8 @@ if (corsOrigins.length === 0) {
 }
 
 export default defineConfig(({ mode, isSsrBuild }) => ({
+	// GitHub Pages serves this project from its repository subpath.
+	base: "/bhoomibytes_portfolio/",
 	envPrefix: ["VITE_", "SITE_"],
 
 	plugins: [

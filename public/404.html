@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loading…</title>
+    <script>
+      (function () {
+        var base = '/bhoomibytes_portfolio';
+        var route = location.pathname.slice(base.length) || '/';
+        var query = location.search ? '&q=' + encodeURIComponent(location.search.slice(1)) : '';
+        location.replace(base + '/?p=' + encodeURIComponent(route) + query + location.hash);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

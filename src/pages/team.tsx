@@ -42,11 +42,11 @@ export default function TeamPage() {
             </Link>
             <div className="h-4 w-px bg-white/20" />
             <img
-              src="/airo-assets/images/logo/horizontal/dark"
+              src="https://isteam.wsimg.com/genai-assistant/logoagent/customer/9cb20ec8-eef8-432a-b965-c2daadfe1408/session/0c0811ef-ba62-4c56-af1f-d2ca7a1f21bd/horizontal-transparent-a13f845a-1dd4-4326-abd6-f594e39169d0/logo-logo.png"
               alt="Bhoomi Bytes"
               className="h-6 w-auto object-contain"
               onError={(e) => {
-                e.currentTarget.src = '/assets/uploads/airo-logo-shimmer-horizontal.svg';
+                e.currentTarget.src = `${import.meta.env.BASE_URL}assets/uploads/airo-logo-shimmer-horizontal.svg`;
               }}
             />
             <div className="ml-auto flex items-center gap-3">
@@ -65,7 +65,7 @@ export default function TeamPage() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="/airo-assets/images/pages/team/hero"
+              src="https://img1.wsimg.com/isteam/getty/2246468073"
               alt="Bhoomi Bytes team working on IoT agriculture project"
               className="w-full h-full object-cover"
               loading="eager"
@@ -73,7 +73,7 @@ export default function TeamPage() {
               width={1400}
               height={500}
               onError={(e) => {
-                e.currentTarget.src = '/assets/uploads/hero-field-bg.svg';
+                e.currentTarget.src = `${import.meta.env.BASE_URL}assets/uploads/hero-field-bg.svg`;
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
@@ -301,7 +301,7 @@ export default function TeamPage() {
                   <p className="text-sm text-white/60 leading-relaxed mb-6">{team.bhabnaju.what.desc}</p>
                   <div className="overflow-hidden rounded-xl">
                     <img
-                      src="/airo-assets/images/pages/team/jadavpur"
+                      src="https://img1.wsimg.com/isteam/getty/1521346293"
                       alt="Jadavpur University campus"
                       className="w-full h-40 object-cover opacity-70"
                       loading="lazy"

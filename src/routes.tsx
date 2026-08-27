@@ -1,19 +1,15 @@
 import { RouteObject } from 'react-router';
 import { lazy } from 'react';
-import HomePage from './pages/index';
-import DemoPage from './pages/demo';
-import TeamPage from './pages/team';
-import ContactPage from './pages/contact';
-import TechPage from './pages/technology';
-// Eager import so renderToString doesn't hit a Suspense boundary on 404 routes
-// and abort to client rendering. The prod 404 page is tiny; the dev-tools
-// variant stays lazy because it pulls in dev-only code we don't want in
-// production bundles.
-import ProdNotFoundPage from './pages/_404';
 
+// Pages load on demand, keeping the initial GitHub Pages download small.
+const HomePage = lazy(() => import('./pages/index'));
+const DemoPage = lazy(() => import('./pages/demo'));
+const TeamPage = lazy(() => import('./pages/team'));
+const ContactPage = lazy(() => import('./pages/contact'));
+const TechPage = lazy(() => import('./pages/technology'));
 const NotFoundPage = import.meta.env.DEV
   ? lazy(() => import('../dev-tools/src/PageNotFound'))
-  : ProdNotFoundPage;
+  : lazy(() => import('./pages/_404'));
 
 export const routes: RouteObject[] = [
   {

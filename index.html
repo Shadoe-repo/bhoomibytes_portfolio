@@ -5,6 +5,12 @@
     <script>
       (function () {
         try {
+          var params = new URLSearchParams(location.search);
+          var route = params.get('p');
+          if (route) {
+            var query = params.get('q');
+            history.replaceState(null, '', '/bhoomibytes_portfolio' + route + (query ? '?' + query : '') + location.hash);
+          }
           var u = new URL(location.href);
           if (u.searchParams.has('airoShareToken')) {
             u.searchParams.delete('airoShareToken');

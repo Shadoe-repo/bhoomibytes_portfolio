@@ -16,8 +16,9 @@
  * - z-index:-1 fill videos paint behind the host's opaque background — clear it
  */
 ;(function () {
-  var SLOT_PREFIX_IMAGES = '/airo-assets/images/'
-  var SLOT_PREFIX_VIDEOS = '/airo-assets/videos/'
+  var ASSET_BASE = (document.currentScript && new URL(document.currentScript.src).pathname.replace(/[^/]+$/, '')) || '/'
+  var SLOT_PREFIX_IMAGES = ASSET_BASE + 'airo-assets/images/'
+  var SLOT_PREFIX_VIDEOS = ASSET_BASE + 'airo-assets/videos/'
   var BG_VIDEO_FILL_STYLE = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;pointer-events:none;'
   var CLEAR_BG_ATTR = 'data-airo-bg-video-clear-bg'
   var mediaTypes = {}
@@ -233,7 +234,7 @@
   }
 
   // Fetch manifest then start observing
-  fetch('/airo-media.json')
+  fetch(ASSET_BASE + 'airo-media.json')
     .then(function (res) {
       if (!res.ok) return {}
       return res.json()
@@ -304,7 +305,7 @@
       if (isDevMode) {
         var pollFailures = 0
         var pollIntervalId = setInterval(function () {
-          fetch('/airo-media.json').then(function (r) {
+          fetch(ASSET_BASE + 'airo-media.json').then(function (r) {
             if (!r.ok) return {}
             return r.json()
           }).then(function (m) {
